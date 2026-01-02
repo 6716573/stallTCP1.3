@@ -536,7 +536,7 @@ export default {
 // =============================================================================
 
 function genNodes(host, uuid, proxyIP, customIPs, psName) {
-  const commonUrlPart = `?encryption=none&security=tls&sni=${host}&fp=random&type=ws&host=${host}`;
+  const commonUrlPart = `?encryption=none&security=tls&sni=${host}&fp=random&type=ws&host=${host}&udp=false`;
   const separator = psName ? ` ${psName}` : '';
   const result = [];
   if (!customIPs || customIPs.length === 0) {
